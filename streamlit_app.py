@@ -1,4 +1,4 @@
-!pip install transformers torch openai ipywidgets pinecone-client streamlit
+pip install transformers torch openai ipywidgets pinecone-client streamlit
 import streamlit as st
 import openai
 from pinecone import Pinecone
