@@ -1,15 +1,17 @@
 # pip install transformers torch openai ipywidgets pinecone-client streamlit
+import os
 import streamlit as st
 import openai
 from pinecone import Pinecone
 
+openapikey = os.environ('openai')
 # Initialize Pinecone client
 pc = Pinecone(api_key="10c85a4c-db09-45a6-93dd-2e302ba1b7cb")
 index = pc.Index("canopy--document-uploader")
 
 # Set your OpenAI API key here
-openai.api_key = "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"
-
+#openai.api_key = "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"
+openai.api_key = openapikey
 def generate_embeddings(query):
     response = openai.Embedding.create(
         model="text-embedding-ada-002",
