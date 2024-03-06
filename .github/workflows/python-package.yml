@@ -12,7 +12,7 @@ on:
     branches: [ "main" ]
 
 env:
-  openaikey: ${{secrets.OPENAI}}
+  openaikey: ${{secrets.OPENAIKEY}}
 
 jobs:
   build:
