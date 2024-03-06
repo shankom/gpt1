@@ -5,7 +5,7 @@ import openai
 from pinecone import Pinecone
 
 
-openapikey = os.environ('openai')
+openapikey = os.getenv('openai')
 # Initialize Pinecone client
 pc = Pinecone(api_key="10c85a4c-db09-45a6-93dd-2e302ba1b7cb")
 index = pc.Index("canopy--document-uploader")
